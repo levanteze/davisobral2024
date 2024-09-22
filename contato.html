@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Gabriel Medina</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Gabriel Medina, Olimpíadas, Surf olímpico, Medina">
+    <meta name="author" content="Davi Sobral Levanteze">
+    <meta name="description" content="Site desenvolvido com uso de CSS, Javascript e Html, com fins acadêmicos, sobre o Gabriel Medina ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="img/brasil.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script language="javascript" type="text/javascript">
+        function validar(){
+        var nome = form.nome.value;
+        var email = form.email.value;
+        var nota = form.nota.value;
+    
+        if(nome == ""){
+        alert('Preencha o campo: Nome');
+        form.nome.focus();
+        return false;
+        }  
+
+        if(email == ""){
+        alert('Preencha o campo: Email');
+        form.email.focus();
+        return false;
+        } 
+
+        if(nota == ""){
+        alert('Preencha o campo: Avaliação do Site');
+        form.nota.focus();
+        return false;
+        }
+
+        if(nome.length < 5 ){
+        alert('Digite seu nome completo');
+        form.nome.focus();
+        return false;
+        }
+        }
+        </script>
+</head>
+<body>
+    <div class="tamanho">
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="topico">Home</a></li>
+                <li><a href="sobre.html" class="topico">Sobre</a></li>
+                <li><a href="destaque.html" class="topico">Destaque</a></li>
+                <li><a href="desafios.html" class="topico">Desafios</a></li>
+                <li><a href="medalhas.html" class="topico">Medalhas</a></li>
+                <li><a href="contato.html" class="topico">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="text7">
+            <table>   
+                <tr>    
+                    <td>    
+                        <form name="form" action="confirma.html" method="Get">
+                            <label id="preencha">Preencha os campos abaixo:</label><br><br><br>
+                            Nome:<br>
+                            <input name="nome" type="text" placeholder="    Escreva aqui" id="dados"><br><br>
+                            Email:<br>
+                            <input name="email" type="text" placeholder="    Escreva aqui" id="dados"><br><br>
+                            Avaliação do Site:   <select name="nota">
+                                <option></option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select><br><br>
+
+                            Faça sua observação:<br><br>
+                            <textarea>Escreva aqui</textarea><br>
+                            <input type="submit" id="botao1" name="botao1" value="Enviar" onclick="return validar()">
+                            <input type="reset" id="botao2" name="botao2" value="Cancelar">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="subir" align="right"><a href="#"><img src="img/subir.png"></a></div>
+            <h5>Davi Sobral 2024-&copyTodos os direitos reservados<br>
+                Trabalho acadêmico sem fins lucrativos</h5>
+        </div>
+    </div>
+</body>
+</html>
